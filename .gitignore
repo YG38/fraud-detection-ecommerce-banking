@@ -39,6 +39,10 @@ env/
 *.pt
 *.npy
 *.npz
+*.joblib
+
+# Model files (large binary files)
+models/
 
 # Output files
 *.png

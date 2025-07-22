@@ -1,38 +1,57 @@
-# Fraud Detection for E-commerce and Banking
+# Fraud Detection in E-commerce and Banking
 
-This project focuses on detecting fraudulent transactions in both e-commerce and banking contexts using machine learning techniques.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-## Project Structure
+A comprehensive fraud detection system for identifying fraudulent transactions in both e-commerce and banking domains using machine learning.
+
+## 🚀 Features
+
+- **Dual-Domain Detection**: Handles both e-commerce and credit card transactions
+- **Multiple Models**: Implements Logistic Regression and Random Forest classifiers
+- **Advanced Analytics**: Includes SHAP-based model interpretability
+- **Production-Ready**: Clean, modular code with proper documentation
+
+## 📊 Results Summary
+
+| Dataset | Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|---------|-------|----------|-----------|--------|----------|---------|
+| E-commerce | Logistic Regression | 69.0% | 18.5% | 67.7% | 0.29 | 0.76 |
+| E-commerce | Random Forest | 95.3% | 93.1% | 54.0% | 0.68 | 0.77 |
+| Credit Card | Logistic Regression | 97.5% | 5.8% | 87.2% | 0.11 | 0.97 |
+| Credit Card | Random Forest | 99.9% | 89.8% | 77.0% | 0.83 | 0.96 |
+
+## 📂 Project Structure
 
 ```
+fraud-detection-ecommerce-banking/
 ├── analysis/               # Analysis scripts and reports
-│   ├── eda.py             # EDA and data visualization
-│   ├── interim_1_report.md # Interim 1 report
-│   └── requirements.txt    # Python dependencies for analysis
-├── data/                   # Data files (not versioned)
-│   ├── Fraud_Data.csv
-│   ├── IpAddress_to_Country.csv
-│   └── creditcard.csv
+│   ├── eda.py              # Exploratory data analysis
+│   ├── feature_engineering.py  # Feature engineering pipeline
+│   ├── model_training.py   # Model training and evaluation
+│   ├── model_explainability.py  # SHAP analysis
+│   ├── interim_1_report.md # Interim report 1
+│   └── interim_2_report.md # Interim report 2
+├── data/                   # Data files (not version controlled)
+├── models/                 # Trained models (not version controlled)
+├── plots/                  # Generated visualizations
 ├── .gitignore             # Git ignore file
-└── README.md              # This file
+├── requirements.txt        # Python dependencies
+├── README.md              # This file
+└── FINAL_REPORT.md        # Comprehensive project report
 ```
 
-## Setup
+## 🛠️ Setup
 
 1. Clone the repository:
-   ```
+   ```bash
    git clone https://github.com/YG38/fraud-detection-ecommerce-banking.git
    cd fraud-detection-ecommerce-banking
    ```
 
-2. Create a virtual environment (recommended):
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```
+2. Install dependencies:
+   ```bash
    cd analysis
    pip install -r requirements.txt
    ```
